@@ -1,0 +1,35 @@
+﻿
+@model IEnumerable<Lab1_Uppg4.Models.BagareModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Bagare</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(BagareModel => BagareModel.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(BagareModel => BagareModel.Name)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => b.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

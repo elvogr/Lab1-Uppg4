@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Lab1_Uppg4.Models.ReceptModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Recept</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(ReceptModel => ReceptModel.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(ReceptModel => ReceptModel.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(ReceptModel => ReceptModel.BagareId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => b.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => b.BagareId)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
