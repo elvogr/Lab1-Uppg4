@@ -8,19 +8,19 @@ namespace Lab1_Uppg4.Models
         public string Name { get; set; }
 
         //Foreign key för bagare ID
-        public int BagareId { get; set; }
+        public string BagareNamn { get; set; }
 
         public ReceptModel()
         {
             Id = 0;
             Name = "Okänt recept";
-            BagareId = 0;
+            BagareNamn = "Okänd bagare";
         }
-        public ReceptModel(int id, string name, int bagareId)
+        public ReceptModel(int id, string name, string bagareNamn)
         {
             Id = id;
             Name = name;
-            BagareId = bagareId;
+            BagareNamn = bagareNamn;
         }
 
     }

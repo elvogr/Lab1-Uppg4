@@ -7,4 +7,8 @@
     <RootNamespace>Lab1_Uppg4</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Formular\" />
+  </ItemGroup>
+
 </Project>

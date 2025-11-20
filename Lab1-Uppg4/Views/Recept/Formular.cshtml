@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Lab1_Uppg4.Models.ReceptModel
+@{
+    ViewBag.Title = "Formulär";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lägg till ett recept: </h2>
+
+<form asp-action="Formular" method="post">
+    <div>
+        <label asp-for="BagareNamn">Bagarens namn</label> <br />
+        <input asp-for="BagareNamn" />
+    </div>
+
+    <div>
+        <label asp-for="Name">Receptnamn</label><br />
+        <input asp-for="Name" />
+    </div>
+
+    <button type="submit">Spara recept</button>
+</form>
+
