@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 
+
 public class ReceptController : Controller
 {
         private static List<ReceptModel> _recept = new()
@@ -17,8 +18,11 @@ public class ReceptController : Controller
 
 
     public IActionResult Index()
-    {
-        return View(_recept); // skicka listan till vyn
+
+    {   // skicka listan och antalet recept till vyn
+        ViewBag.recipieCounter = _recept.Count();
+        return View(_recept);
+
     }
 
     // GET: visar formuläret
@@ -42,8 +46,10 @@ public class ReceptController : Controller
         model.Id = _recept.Any() ? _recept.Max(r => r.Id) + 1 : 1;
         _recept.Add(model);
 
-        // Efter att vi sparat: gå tillbaka till tabellen
+        // Efter att vi sparat, gå tillbaka till tabellen
         return RedirectToAction("Index");
     }
+
 }
+
 

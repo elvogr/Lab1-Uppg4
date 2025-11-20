@@ -15,6 +15,6 @@ public class BagareController : Controller
             new BagareModel()
         };
 
-        return View(bagareLista);
+        return View(bagareLista); //Skickar till vyn
     }
 }
